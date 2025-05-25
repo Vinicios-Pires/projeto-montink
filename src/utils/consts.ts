@@ -7,7 +7,7 @@ export const product = {
   colors: ["Preto", "Branco"],
   mediasByColor: {
     Preto: [
-      "../assets/preto/imagem-principal.webp",
+      "https://raw.githubusercontent.com/Vinicios-Pires/projeto-montink/refs/heads/main/src/assets/preto/imagem-principal.webp",
       "../assets/preto/imagem-2.webp",
       "../assets/preto/imagem-3.webp",
       "../assets/preto/imagem-4.webp",
