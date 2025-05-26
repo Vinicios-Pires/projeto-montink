@@ -1,55 +1,40 @@
-# React + TypeScript + Vite
+# Página de Produto - E-commerce
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este projeto é um front-end desenvolvido em **React + TypeScript + Vite**, com estilização utilizando **Tailwind CSS**.
 
-Currently, two official plugins are available:
+## ✨ Funcionalidades
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Galeria de Imagens do Produto**
 
-## Expanding the ESLint configuration
+  - Uma imagem principal (ocupando 35% da tela).
+  - Miniaturas abaixo da imagem principal.
+  - Alteração da imagem principal ao clicar nas miniaturas.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **Informações do Produto**
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+  - Título do produto.
+  - Preço do produto.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+- **Seletores de Variantes**
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+  - Tamanho e Cor.
+  - Os seletores são gerados dinamicamente a partir de arrays ou objetos. Nenhum valor é fixo no código.
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+- **Consulta de Frete por CEP**
 
+  - Campo para digitar o CEP.
+  - Verificação e formatação automática do CEP.
+  - Consulta na API pública [ViaCEP](https://viacep.com.br/) para exibir o endereço completo, caso o CEP seja válido.
+
+- **Persistência dos Dados**
+  - Todas as ações feitas pelo usuário (seleção de imagem, tamanho, cor e CEP) são salvas localmente.
+  - Os dados são mantidos por **15 minutos**, mesmo que a página seja atualizada (usando `localStorage` ou `sessionStorage` com controle de tempo).
+
+## 🔗 Tecnologias Utilizadas
+
+- [React](https://react.dev/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Vite](https://vitejs.dev/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Axios](https://axios-http.com/) - Para requisições HTTP
+- [ViaCEP API](https://viacep.com.br/) - Para consulta de CEP
