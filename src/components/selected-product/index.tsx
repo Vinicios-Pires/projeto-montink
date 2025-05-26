@@ -20,7 +20,8 @@ const SelectedProduct = ({ overrideClassName }: SelectedProductProps) => {
   return (
     <div
       className={classNames(
-        "flex flex-col w-full lg:w-[70%] min-h-0 lg:h-screen overflow-y-auto",
+        "flex flex-col w-full lg:w-[70%] min-h-0 lg:h-screen overflow-y-auto overflow-x-hidden",
+        "[&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]",
         overrideClassName
       )}
     >
