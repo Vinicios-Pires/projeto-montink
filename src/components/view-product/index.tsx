@@ -16,8 +16,8 @@ const ViewProduct = () => {
   }, [images]);
 
   return (
-    <div className="flex flex-col items-center">
-      <div className="w-[35vw] h-[35vw]">
+    <div className="flex flex-col items-center w-full lg:flex-1 order-2 lg:order-2">
+      <div className="w-full max-w-sm lg:w-[35vw] lg:h-[35vw] h-80 lg:max-w-none">
         <img
           src={mainImage}
           alt={`Tênis ${product.title} na cor ${selectedColor}`}
@@ -30,7 +30,7 @@ const ViewProduct = () => {
           <div
             key={img}
             onClick={() => setMainImage(img)}
-            className={`w-16 h-16 border-2 rounded-lg cursor-pointer p-1
+            className={`w-12 h-12 lg:w-16 lg:h-16 border-2 rounded-lg cursor-pointer p-1
               ${
                 mainImage === img
                   ? "border-custom-bg-header"

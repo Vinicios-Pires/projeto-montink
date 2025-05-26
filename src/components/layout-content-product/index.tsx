@@ -12,7 +12,7 @@ const LayoutContentProduct = ({
   return (
     <div
       className={classNames(
-        "flex mt-16 w-[100%] justify-around",
+        "flex flex-col lg:flex-row mt-4 lg:mt-16 w-full gap-6 lg:gap-4 lg:justify-around px-4 lg:px-0 pb-8 lg:pb-0",
         overrideClassName
       )}
     >

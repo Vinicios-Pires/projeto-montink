@@ -23,9 +23,9 @@ const ValuesInfoProduct = () => {
   };
 
   return (
-    <div className="flex flex-col w-[20%]">
+    <div className="flex flex-col w-full lg:w-[20%] order-3 lg:order-3">
       <div className="flex flex-col">
-        <p>
+        <p className="text-sm lg:text-base">
           <span className="font-semibold">Cor:</span>{" "}
           {formatColors(product.colors)}
         </p>
@@ -33,7 +33,7 @@ const ValuesInfoProduct = () => {
           <ColorSelectorComponent />
         </DefaultContainerInfo>
 
-        <p className="mt-4">
+        <p className="mt-4 text-sm lg:text-base">
           <span className="font-semibold">Tamanho:</span>{" "}
         </p>
         <DefaultContainerInfo>
@@ -41,13 +41,13 @@ const ValuesInfoProduct = () => {
         </DefaultContainerInfo>
 
         <button
-          className={`w-full h-12 rounded-md bg-custom-bg-header hover:opacity-80 text-white font-semibold transition mt-8 `}
+          className={`w-full h-12 rounded-md bg-custom-bg-header hover:opacity-80 text-white font-semibold transition mt-6 lg:mt-8 text-sm lg:text-base`}
         >
           COMPRAR
         </button>
 
         <div className="mt-4">
-          <p className="mb-2">
+          <p className="mb-2 text-sm lg:text-base">
             <span className="font-semibold">Consulte seu CEP</span>
           </p>
           <CepSelectorComponent />

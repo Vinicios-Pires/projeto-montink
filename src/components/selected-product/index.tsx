@@ -20,7 +20,7 @@ const SelectedProduct = ({ overrideClassName }: SelectedProductProps) => {
   return (
     <div
       className={classNames(
-        "flex flex-col h-screen w-[70%]",
+        "flex flex-col w-full lg:w-[70%] min-h-0 lg:h-screen overflow-y-auto",
         overrideClassName
       )}
     >
