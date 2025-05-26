@@ -1,4 +1,5 @@
-import { createContext, useContext, useState, type ReactNode } from "react";
+import { createContext, useContext, type ReactNode } from "react";
+import { usePersistentState } from "../hooks/usePersistentState";
 
 type ProductContextType = {
   selectedColor: string;
@@ -8,7 +9,11 @@ type ProductContextType = {
 const ProductContext = createContext<ProductContextType | undefined>(undefined);
 
 export const ProductProvider = ({ children }: { children: ReactNode }) => {
-  const [selectedColor, setSelectedColor] = useState("Preto");
+  const [selectedColor, setSelectedColor] = usePersistentState(
+    "selectedProductColor",
+    "Preto",
+    15
+  );
 
   return (
     <ProductContext.Provider value={{ selectedColor, setSelectedColor }}>
