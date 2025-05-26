@@ -28,7 +28,7 @@ Este projeto é um front-end desenvolvido em **React + TypeScript + Vite**, com 
 
 - **Persistência dos Dados**
   - Todas as ações feitas pelo usuário (seleção de imagem, tamanho, cor e CEP) são salvas localmente.
-  - Os dados são mantidos por **15 minutos**, mesmo que a página seja atualizada (usando `localStorage` ou `sessionStorage` com controle de tempo).
+  - Os dados são mantidos por **15 minutos**, mesmo que a página seja atualizada usando **localStorage** com controle de tempo.
 
 ## 🔗 Tecnologias Utilizadas
 
